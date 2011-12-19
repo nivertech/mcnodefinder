@@ -1,0 +1,14 @@
+%%% -*- mode: erlang -*-
+
+{application, nodefinder_mc,
+ [{description, "Node Finder - multicast"},
+  {vsn, "1.0"},
+  {modules, []},
+  {mod,{nodefinder_mc_app,[]}},
+  {registered, [nodefinder_mc_srv]},  
+  {applications, [kernel,stdlib,sasl,crypto]},
+  {env, [{ addr, { 226, 0  , 0  , 1   } }, 
+         { port, 6969 },
+         { multicast_ttl, 1 }]}
+]}.
+
